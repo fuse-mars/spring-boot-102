@@ -9,7 +9,7 @@ POST request:
 * API = `<host>/api`
 * METHOD = `GET, POST, PUT, DELETE`
 * HEADERS = `{Authorization: "", hash: ""}`
-* QUERY = `{userdata: {a: 1, b: 2}}`
+* QUERY_PARAMS = `{userdata: {a: 1, b: 2}}`
 POST response:
 * Saved object
 
