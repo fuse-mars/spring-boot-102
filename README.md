@@ -52,11 +52,13 @@ show lines from build.gradle here
 
 * Add a model object (this is basically a java class)
 ```
+ApiSpec.java
 whole class definition in here
 ```
 
 * Add a controller class (it is in charge of serving 2 restful API's)
 ```
+// ApiSpecController.java
 whole class definition in here
 ```
 
