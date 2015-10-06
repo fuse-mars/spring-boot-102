@@ -193,6 +193,10 @@ gradle build
 ```
 gradle bootRun
 ```
+* Access the application from a web browser
+```
+http://localhost:8080/apispec
+```
 
 Resources:
 * https://docs.gradle.org/current/userguide/build_init_plugin.html
