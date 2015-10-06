@@ -92,21 +92,74 @@ org.springframework.boot:spring-boot-starter-data-jpa
 * Add a model object (this is basically a java class)
 ```
 cd ~/Documents/projects/spring-boot-102
-touch src/main/java/ApiSpec.java
+touch src/main/java/apispec/ApiSpec.java
 ```
 ```
-// ApiSpec.java
-whole class definition in here
+// ApiSpec.java - model object definition
+
+package apispec;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class ApiSpec {
+
+  @Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
+
+	private String api;
+  private String method;
+  private String headers;
+	private String queryParams;
+
+  public String getApi() {
+		return api;
+	}
+
+	public String getMethod() {
+		return method;
+	}
+
+  public String getHeaders() {
+		return headers;
+	}
+
+	public String getQueryParams() {
+		return queryParams;
+	}
+
+  public ApiSpec(String api, String method, String headers, String queryParams) {
+    this.api = api;
+    this.method = method;
+    this.headers = headers;
+    this.queryParams = queryParams;
+  }
+}
 ```
 
 * Add a controller class (it is in charge of serving 2 restful API's)
 ```
 cd ~/Documents/projects/spring-boot-102
-touch src/main/java/ApiSpecController.java
+touch src/main/java/apispec/ApiSpecController.java
 ```
 ```
-// ApiSpecController.java
-whole class definition in here
+// ApiSpecController.java - controller and application starter/entry point
+package apispec;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ApiSpecController {
+
+  public static void main(String [] arguments){
+    SpringApplication.run(ApiSpecController.class, arguments);
+  }
+}
 ```
 
 * Add a repository class (it is in charge of data storage)
@@ -115,6 +168,24 @@ cd ~/Documents/projects/spring-boot-102
 touch src/main/java/ApiSpecRepository.java
 ```
 ```
-// ApiSpecRepository.java
-whole class definition in here
+// ApiSpecRepository.java - repository for data storage
+package apispec;
+
+import java.util.List;
+
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.query.Param;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+
+@RepositoryRestResource(collectionResourceRel = "apispec", path = "apispec")
+public interface ApiSpecRepository extends PagingAndSortingRepository<ApiSpec, Long> {
+
+	List<ApiSpec> findByApi(@Param("api") String api);
+
+}
 ```
+
+
+Resources:
+* https://docs.gradle.org/current/userguide/build_init_plugin.html
+* http://spring.io/guides/gs/accessing-data-rest
