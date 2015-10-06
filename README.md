@@ -32,6 +32,10 @@ mkdir -p ~/Documents/projects/spring-boot-102/src/main/resources
 mkdir -p ~/Documents/projects/spring-boot-102/src/main/tests
 ```
 * Add a project management tool
+```
+cd ~/Documents/projects/spring-boot-102
+gradle init
+```
 `gradle init` creates the build.gradle. 
 After this, we add the project dependencies and other information needed to identify the current projet.
 
