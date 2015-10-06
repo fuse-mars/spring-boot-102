@@ -55,7 +55,7 @@ apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
 springBoot {
-  mainClass = 'ApiSpecController'
+  mainClass = 'apispec.ApiSpecController'
 }
 jar {
     baseName = 'spring-boot-102'
