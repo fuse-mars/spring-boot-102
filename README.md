@@ -29,7 +29,7 @@ Technology:
 Steps followed:
 * create the application structure (on *nix machines)
 ```
-mkdir -p ~/Documents/projects/spring-boot-102/src/main/java
+mkdir -p ~/Documents/projects/spring-boot-102/src/main/java/apispec
 mkdir -p ~/Documents/projects/spring-boot-102/src/main/resources
 mkdir -p ~/Documents/projects/spring-boot-102/src/test
 ```
