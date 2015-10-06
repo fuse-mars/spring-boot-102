@@ -185,6 +185,14 @@ public interface ApiSpecRepository extends PagingAndSortingRepository<ApiSpec, L
 }
 ```
 
+* Build the application
+```
+gradle build
+```
+* Run the application
+```
+gradle bootRun
+```
 
 Resources:
 * https://docs.gradle.org/current/userguide/build_init_plugin.html
