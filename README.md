@@ -10,12 +10,14 @@ POST request:
 * METHOD = `GET, POST, PUT, DELETE`
 * HEADERS = `{Authorization: "", hash: ""}`
 * QUERY_PARAMS = `{userdata: {a: 1, b: 2}}`
+
 POST response:
 * Saved object
 
 GET url: `<host>/api/api-spec/<id>`
 GET request:
 * ID = `object id`
+
 GET response:
 * Saved specified by the id
 
