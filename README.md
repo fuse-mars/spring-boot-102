@@ -21,7 +21,8 @@ GET response:
 
 Technology:
 * [Gradle](https://gradle.org/)
-* 
+* [Spring Boot](http://projects.spring.io/spring-boot/)
+* [Spring Data](http://projects.spring.io/spring-data/)
 
 Steps followed:
 * create the application structure (on *nix machines)
