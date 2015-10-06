@@ -29,7 +29,7 @@ Steps followed:
 ```
 mkdir -p ~/Documents/projects/spring-boot-102/src/main/java
 mkdir -p ~/Documents/projects/spring-boot-102/src/main/resources
-mkdir -p ~/Documents/projects/spring-boot-102/src/main/tests
+mkdir -p ~/Documents/projects/spring-boot-102/src/test
 ```
 * Add a project management tool
 ```
