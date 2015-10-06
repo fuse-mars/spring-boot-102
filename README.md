@@ -52,13 +52,30 @@ show lines from build.gradle here
 
 * Add a model object (this is basically a java class)
 ```
+cd ~/Documents/projects/spring-boot-102
+touch src/main/java/ApiSpec.java
+```
+```
 // ApiSpec.java
 whole class definition in here
 ```
 
 * Add a controller class (it is in charge of serving 2 restful API's)
 ```
+cd ~/Documents/projects/spring-boot-102
+touch src/main/java/ApiSpecController.java
+```
+```
 // ApiSpecController.java
 whole class definition in here
 ```
 
+* Add a repository class (it is in charge of data storage)
+```
+cd ~/Documents/projects/spring-boot-102
+touch src/main/java/ApiSpecRepository.java
+```
+```
+// ApiSpecRepository.java
+whole class definition in here
+```
