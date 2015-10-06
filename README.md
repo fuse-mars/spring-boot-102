@@ -42,12 +42,51 @@ After this, we add the project dependencies and other information needed to iden
 Final build.gradle looks like this.
 
 ```
-build.gradle should be pasted here
+buildscript {
+     repositories {
+         mavenCentral()
+     }
+     dependencies {
+         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.6.RELEASE")
+     }
+ }
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+springBoot {
+  mainClass = 'ApiSpecController'
+}
+jar {
+    baseName = 'spring-boot-102'
+    version =  '0.0.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-data-rest'
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compile 'com.h2database:h2'
+
+    compile 'org.slf4j:slf4j-api:1.7.12'
+    testCompile 'junit:junit:4.12'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.7'
+}
 ```
 
 * Add data related library dependancies
 ```
-show lines from build.gradle here
+org.springframework.boot:spring-boot-starter-data-rest
+org.springframework.boot:spring-boot-starter-data-jpa
 ```
 
 * Add a model object (this is basically a java class)
