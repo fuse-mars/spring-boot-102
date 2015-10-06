@@ -27,9 +27,9 @@ Technology:
 Steps followed:
 * create the application structure (on *nix machines)
 ```
-mkdir -p ~Documents/projects/spring-boot-102/src/main/java
-mkdir -p ~Documents/projects/spring-boot-102/src/main/resources
-mkdir -p ~Documents/projects/spring-boot-102/src/main/tests
+mkdir -p ~/Documents/projects/spring-boot-102/src/main/java
+mkdir -p ~/Documents/projects/spring-boot-102/src/main/resources
+mkdir -p ~/Documents/projects/spring-boot-102/src/main/tests
 ```
 * Add a project management tool
 `gradle init` creates the build.gradle. 
