@@ -112,6 +112,7 @@ public class ApiSpec {
   	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+	public long getId() { return id;}
 
 	private String api;
   	private String method;
