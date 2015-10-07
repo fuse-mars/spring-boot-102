@@ -19,10 +19,13 @@
     </section>
 
     <section class="main-content">
-      <h1>
-<a id="spring-boot-102" class="anchor" href="#spring-boot-102" aria-hidden="true"><span class="octicon octicon-link"></span></a>spring-boot-102</h1>
+      <h3>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h3>
 
-<p>Spring boot application with a GET and a POST requests. </p>
+<p>This Article explains step by step how to create a restful spring-boot application</p>
+
+<h3>
+<a id="use-case" class="anchor" href="#use-case" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use case</h3>
 
 <p>We are build an application that allows users to store api specifications.</p>
 
@@ -161,37 +164,35 @@ import javax.persistence.Id;
 @Entity
 public class ApiSpec {
 
-  @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    public long getId() { return id;}
 
     private String api;
-  private String method;
-  private String headers;
+    private String method;
+    private String headers;
     private String queryParams;
 
-  public String getApi() {
-        return api;
-    }
+    public String getApi() { return api;}
+    public void setApi(String api) {  this.api = api;}
 
-    public String getMethod() {
-        return method;
-    }
+    public String getMethod() { return method;}
+    public void setMethod(String method) { this.method = method;}
 
-  public String getHeaders() {
-        return headers;
-    }
+    public String getHeaders() {return headers;}
+    public void setHeaders(String headers) { this.headers = headers;}
 
-    public String getQueryParams() {
-        return queryParams;
-    }
+    public String getQueryParams() {return queryParams;}
+    public void setQueryParams(String queryParams) {  this.queryParams = queryParams;}
 
-  public ApiSpec(String api, String method, String headers, String queryParams) {
-    this.api = api;
-    this.method = method;
-    this.headers = headers;
-    this.queryParams = queryParams;
-  }
+    public ApiSpec(){}
+    public ApiSpec(String api, String method, String headers, String queryParams) {
+            this.api = api;
+            this.method = method;
+            this.headers = headers;
+            this.queryParams = queryParams;
+    }
 }
 </code></pre>
 
@@ -279,6 +280,16 @@ public interface ApiSpecRepository extends PagingAndSortingRepository&lt;ApiSpec
 
     </section>
 
-  
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-68265226-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
